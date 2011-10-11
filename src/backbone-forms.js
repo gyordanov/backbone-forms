@@ -520,6 +520,15 @@
         
         tagName: 'input',
         
+      events :{
+        'click': 'didClick'
+      },
+
+      didClick:function(){
+        this.value = !this.value;
+        this.setValue(this.value);
+        return true;
+      },
         initialize: function(options) {
             editors.Base.prototype.initialize.call(this, options);
             
